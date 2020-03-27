@@ -1,0 +1,4 @@
+.DS_*
+dist
+docs/.vuepress/dist/
+node_modules
