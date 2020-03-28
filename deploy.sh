@@ -13,7 +13,7 @@ message=$(git log -1 --pretty=format:'%s')
 echo $message
 
 # 生成静态文件
-yarn docs:build
+# yarn docs:build
 
 # 进入生成的文件夹
 cd ./dist
@@ -23,7 +23,7 @@ cd ./dist
 
 git init
 git add -A
-git commit -m $message
+git commit -m "${message}"
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:aa978563552/aa978563552.github.io.git master
