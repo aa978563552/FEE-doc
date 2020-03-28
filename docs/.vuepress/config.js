@@ -1,7 +1,7 @@
 const { nav, footer, icons } = require('./themeConf')
 
 module.exports = {
-  base: '/',
+  base: '/FEE-doc/',
   dest: './dist/',
   title: 'FEE',
   description: 'Talk is cheap, show me your code!',
@@ -11,12 +11,12 @@ module.exports = {
     '/zh/': {
       lang: 'zh-CN',
       title: 'FEE开源项目文档',
-      description: 'Vue 驱动的静态网站生成器'
+      description: '链家大前端项目开源文档（中文）'
     },
     '/en/': {
       lang: 'en-US',
       title: 'FEE DOC',
-      description: 'Vue 驱动的静态网站生成器'
+      description: '链家大前端项目开源文档（English）'
     }
   },
   themeConfig: {
@@ -37,17 +37,13 @@ module.exports = {
         lang: 'zh-CN',
         label: '简体中文',
         selectText: '切换语言',
-        ariaLabel: 'Languages',
-        title: 'FEE开源项目文档',
-        description: 'Vue 驱动的静态网站生成器'
+        ariaLabel: 'Languages'
       },
       '/en/': {
         lang: 'en-US',
         label: 'English',
         selectText: 'Languages',
-        ariaLabel: 'Languages',
-        title: 'FEE DOC',
-        description: 'Vue 驱动的静态网站生成器'
+        ariaLabel: 'Languages'
       }
     }
   },

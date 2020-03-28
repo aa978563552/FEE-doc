@@ -14,5 +14,6 @@
     "@vuepress/plugin-medium-zoom": "^1.4.0",
     "@vuepress/plugin-nprogress": "^1.4.0",
     "vuepress": "^1.4.0"
-  }
+  },
+  "dependencies": {}
 }
