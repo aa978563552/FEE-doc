@@ -13,7 +13,7 @@ message=$(git log -1 --pretty=format:'%s')
 echo $message
 
 # 生成静态文件
-# yarn docs:build
+yarn docs:build
 
 # 进入生成的文件夹
 cd ./dist
