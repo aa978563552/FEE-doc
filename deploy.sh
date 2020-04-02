@@ -29,7 +29,8 @@ git commit -m "${message}"
 # git push -f git@github.com:aa978563552/aa978563552.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:alphawq/FEE-doc.git master:gh-pages
+# git push -f git@github.com:alphawq/FEE-doc.git master:gh-pages
+git push -f git@github.com:aa978563552/FEE-doc.git master:gh-pages
 
 cd -
 
