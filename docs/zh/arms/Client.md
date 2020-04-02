@@ -11,110 +11,25 @@ author: Aphasia
 
 最低支持的屏幕分辨率: 1440 \* 900
 
-# Todo List
-
--[X] 引入 webpack 打包配置 -[ ] 引入 babel 转义 -[ ] eslint 切换到 jsStandard 规范 -[ ] 完善 jsconfig, 支持 vue -[ ] 在 readme 中添加使用说明 -[ ] 在 readme 中添加 npm 使用说明 -[X] 在 readme 中添加项目发布流程
-
-# npm 包使用说明
-
-```bash
-
-webpack         项目打包配置
-webpack-cli
-
-shelljs         执行shell命令
-ora             打印spinner效果
-chalk           打印日志
-
-#   webpack常用组件
-extract-text-webpack-plugin
-webpack-uglify-parallel
-copy-webpack-plugin
-extract-text-webpack-plugin
-file-loader
-friendly-errors-webpack-plugin
-html-webpack-plugin
-optimize-css-assets-webpack-plugin
-style-loader
-url-loader
-
-vue-loader
-vue-style-loader
-vue-template-compiler
-webpack-merge
-webpack-bundle-analyzer
-webpack-dev-middleware
-webpack-hot-middleware
-
-#   babel转义
-babel-loader@8
-@babel/core
-@babel/preset-env
-
-```
-
 ## Install
 
-```bush
-// install dependencies
-npm install
+```bash
+cd client
+npm i
 ```
 
 ## Run
 
 ### Development
 
-```bush
+```bash
 npm run dev
 ```
 
 ### Production(Build)
 
-```bush
+```bash
 npm run build
-```
-
-### 项目发布
-
-首先在本地执行`cat ~/.ssh/id_rsa.pub`, 记下 ssh 公钥
-登陆相应环境
-执行下方命令, 将公钥添加到服务器上
-
-```bash
-echo '公钥内容' >> ~/.ssh/authorized_keys
-```
-
-测试环境:
-部门开发机环境:
-备用环境:
-
-```bash
-#   发布dev环境代码
-npm install                                                             \
-&& npm run build                                                        \
-&& echo "publish fe resource to "                          \
-&& scp -r ./dist/* root@*****/fee-rd/public/  \
-&& echo "publish success"
-```
-
-```bash
-#   发布testing环境代码
-npm install                                                            \
-&& npm run build                                                       \
-&& echo "publish fe resource to "                           \
-&& scp -r ./dist/* root@*****/fee-rd/public/   \
-&& echo "publish success"
-
-```
-
-```bash
-#   发布bak环境代码
-npm install                                                            \
-&& npm run build                                                       \
-&& echo "publish fe resource to "                           \
-&& scp -r ./dist/* root@*****/fee-rd/public/   \
-&& echo "publish success"
-
 ```
 
 ## 项目功能
@@ -122,7 +37,6 @@ npm install                                                            \
 - 注册
 - 登录
   - 普通用户登录(需要先注册)
-  - 内部用户登录
 - 修改信息(普通用户)
   - 修改昵称
   - 修改密码
@@ -139,17 +53,27 @@ npm install                                                            \
 - 切换项目(当前登录用户参与的项目)
 - 用户行为
   - 菜单点击量
-  - 用户在线时长
-  - 新增用户数据
+  - 设备信息统计
+  - 打点配置与数据分析
 - 异常监控
+  - 错误监控
+  - 性能监控
 - 报警
   - 配置( 设置报警条件,通过邮件或企微发送报警信息)
   - 日志(报警历史记录)
-- 埋点测试(用于测试环境,检测打点数据是否能正常收到)
+- 环比数据统计
+  - 错误占比环比
+  - 错误数量环比
+  - 错误排行环比
+  - 性能各指标数据环比
 - 成员管理(owner 权限)
   - 添加成员
   - 修改成员  角色(只能是'owner'或'dev')
-  -  修改是否发送报警 
+  -  修改是否发送报警
+  -  项目管理
+  - 审批管理
+  - 日报订阅管理
+- 数据大盘
 
 ---
 
@@ -169,22 +93,12 @@ npm install                                                            \
     ├── config  项目运行配置
     ├── directive  自定义指令
     ├── libs  封装工具函数
+    ├── locale  多语言文件
+    ├── mock  mock模拟数据
     ├── router  路由配置
     ├── store  Vuex配置
     ├── view  页面文件
     └── tests  测试相关
-```
-
-# 发布脚本
-
-```
-npm run build
-
-scp -r /Users/wiszc/code/plat-fe/fee-fe/dist/. root@*****/fee-rd/public/.
-
-scp -r /Users/wiszc/code/plat-fe/fee-fe/dist/index.html root@1*****/fee-rd/dist/views/index.ejs
-
-ZjZiNzc0ZjY3MmUyZGJjMjhhNDcxOWMw
 ```
 
 # DEPENDENCIES INTRODUCE
@@ -273,17 +187,9 @@ Vue.js 的集中状态管理
 
 # 项目说明
 
-## 登陆
-
-登陆地址 => http://test-arms.example.com/login
-
-使用账号&密码进行登陆.
-
-![登陆截图](http://ww1.sinaimg.cn/large/6671cfa8ly1fxlllzwuzmj21hc0qcqv7.jpg)
-
 ## 使用
 
-登陆后默认进入 saas 项目, 随后可以让管理员把自己加到对应项目里.
+注册账号之后，可以进行登录，系统里提供了一个默认项目。
 
 平台按项目进行查看, 提供以下功能
 
@@ -292,17 +198,9 @@ Vue.js 的集中状态管理
   - 浏览器版本分布
   - 新增用户
   - 菜单点击量
-  - 用户在线时长
 - 异常监控
-  - DashBoard
-  - js 异常
   - 页面性能
-  - HTTP CODE
-  - 接口数据结构
-  - 启动过程
-  - 加载页面失败
-  - 登录异常
-  - 代理异常
+  - 错误看板
 - 埋点测试
   - 面向测试、开发人员，单纯测试打点链路是否可行,以及测试打点数据的展示。
 - 成员管理
@@ -311,45 +209,9 @@ Vue.js 的集中状态管理
 - 报警配置
   - 可以设定错误触发阈值, 错误数超出阈值后即会在企业微信中发送报警消息
 
-# 组件 CheckList
-
--[ ] style 是否已添加 scoped 属性
-
 # VSCode 前端格式化推荐配置
 
-##安装 eslint,vetur 插件 ##点击设置->搜索 settings.json，将如下配置填入进去
-
-```json
-   // eslint配置
-   "eslint.autoFixOnSave": true,
-   "eslint.options": {
-     "extensions": [
-       ".html",
-       ".js",
-       ".vue",
-       ".jsx"
-     ]
-   },
-   "eslint.validate": [
-     {
-       "language": "html",
-       "autoFix": true
-     },
-     {
-       "language": "vue",
-       "autoFix": true
-     },
-     {
-       "language": "javascript",
-       "autoFix": true
-     },
-     {
-       "language": "javascriptreact",
-       "autoFix": true
-     }
-   ],
-
-```
+安装[Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), over
 
 #debug 开关
 
