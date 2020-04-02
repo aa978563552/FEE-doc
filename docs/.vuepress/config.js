@@ -4,25 +4,24 @@ module.exports = {
   base: '/FEE-doc/',
   dest: './dist/',
   title: 'FEE',
-  description: 'Talk is cheap, show me your code!',
+  description: '贝壳前端架构组出品',
   extraWatchFiles: ['.vuepress/*.js', '.vuepress/**/*.js'],
   locales: {
     // 键名是该语言所属的子路径
     '/zh/': {
       lang: 'zh-CN',
       title: 'FEE开源项目文档',
-      description: '链家大前端项目开源文档（中文）'
+      description: '贝壳前端架构组项目开源文档（中文）'
     },
     '/en/': {
       lang: 'en-US',
-      title: 'FEE DOC',
-      description: '链家大前端项目开源文档（English）'
+      title: 'FEE DOCS',
+      description: '贝壳前端架构组项目开源文档（English）'
     }
   },
   themeConfig: {
     logo: '/images/icons/logo.png',
     smoothScroll: true,
-    sidebar: 'auto',
     nav: nav,
     footer: footer,
     lastUpdated: 'Last Updated',
@@ -37,7 +36,28 @@ module.exports = {
         lang: 'zh-CN',
         label: '简体中文',
         selectText: '切换语言',
-        ariaLabel: 'Languages'
+        ariaLabel: 'Languages',
+        lastUpdated: '上次编辑时间',
+        editLinkText: '在 GitHub 上编辑此页',
+        sidebar: {
+          '/zh/guide/': ['/zh/guide/', '/zh/arms/', '/zh/qingchan/'],
+          '/zh/arms/': [
+            '/zh/arms/',
+            {
+              title: '灯塔',
+              collapsable: false,
+              children: ['/zh/arms/client', '/zh/arms/server', '/zh/arms/sdk']
+            }
+          ],
+          '/zh/qingchan/': [
+            '/zh/qingchan/',
+            {
+              title: '青蝉',
+              collapsable: false,
+              children: ['/zh/qingchan/01']
+            }
+          ]
+        }
       },
       '/en/': {
         lang: 'en-US',
