@@ -1,31 +1,29 @@
 ---
 title: Client端
-# sidebar: auto
-# layout: SpecialLayout
 ---
 
-# 项目介绍 <Badge text="beta" type="warning"/> <Badge text="默认主题"/>
+# 项目介绍 <Badge text="Client" type="warning"/>
 
 本项目为灯塔前端项目.
 
-最低支持的屏幕分辨率: 1440 \* 900
+最低支持的屏幕分辨率: `1440 * 900`
 
-## Install
+## 安装依赖
 
 ```bash
 cd client
 npm i
 ```
 
-## Run
+## 运行
 
-### Development
+### 开发环境
 
 ```bash
 npm run dev
 ```
 
-### Production(Build)
+### 生产环境
 
 ```bash
 npm run build
@@ -212,7 +210,7 @@ Vue.js 的集中状态管理
 
 安装[Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), over
 
-#debug 开关
+## debug 开关
 
 ```
 开发模式可用debug.js修改服务器，端口号，从Git上克隆时有debug.js_,改成.js即可
