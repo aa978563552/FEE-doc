@@ -40,13 +40,21 @@ module.exports = {
         lastUpdated: '上次编辑时间',
         editLinkText: '在 GitHub 上编辑此页',
         sidebar: {
-          '/zh/guide/': ['/zh/guide/', '/zh/arms/', '/zh/qingchan/'],
-          '/zh/arms/': [
-            '/zh/arms/',
+          '/zh/guide/': ['/zh/guide/', '/zh/arms/1.0/', '/zh/arms/2.0/', '/zh/qingchan/'],
+          '/zh/arms/1.0/': [
+            '/zh/arms/1.0/',
             {
               title: '灯塔',
               collapsable: false,
-              children: ['/zh/arms/client', '/zh/arms/server', '/zh/arms/sdk']
+              children: ['/zh/arms/1.0/client', '/zh/arms/1.0/server']
+            }
+          ],
+          '/zh/arms/2.0/': [
+            '/zh/arms/2.0/',
+            {
+              title: '灯塔',
+              collapsable: false,
+              children: ['/zh/arms/2.0/client', '/zh/arms/2.0/server']
             }
           ],
           '/zh/qingchan/': [

@@ -4,12 +4,12 @@ exports.nav = [
     icon: 'el-icon-house',
     items: [
       {
-        text: 'Client',
-        link: '/zh/arms/Client'
+        text: '1.x',
+        link: '/zh/arms/1.0/'
       },
       {
-        text: 'Server',
-        link: '/zh/arms/Server'
+        text: '2.x',
+        link: '/zh/arms/2.0/'
       }
     ]
   },

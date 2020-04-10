@@ -7,7 +7,7 @@ actionText: 快速上手 →
 actionLink: /zh/guide/
 features:
   - title: 灯塔
-    details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+    details: 一款可对前端设备、系统、环境信息，页面报错、页面性能等进行监控，架构简单且轻量的前端监控系统
   - title: 青蝉
     details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
   - title: 落兵台
