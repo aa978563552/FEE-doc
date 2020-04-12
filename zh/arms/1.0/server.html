@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Server端 | FEE开源项目文档</title>
+    <meta name="description" content="贝壳前端架构组项目开源文档（中文）">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/FEE-doc/assets/css/0.styles.c67ff556.css" as="style"><link rel="preload" href="/FEE-doc/assets/js/app.ea892fa5.js" as="script"><link rel="preload" href="/FEE-doc/assets/js/2.ead826cc.js" as="script"><link rel="preload" href="/FEE-doc/assets/js/14.672bf7b2.js" as="script"><link rel="prefetch" href="/FEE-doc/assets/js/10.f467d413.js"><link rel="prefetch" href="/FEE-doc/assets/js/11.68ab6506.js"><link rel="prefetch" href="/FEE-doc/assets/js/12.2a20420b.js"><link rel="prefetch" href="/FEE-doc/assets/js/13.de61ed3a.js"><link rel="prefetch" href="/FEE-doc/assets/js/15.b680974d.js"><link rel="prefetch" href="/FEE-doc/assets/js/16.17802682.js"><link rel="prefetch" href="/FEE-doc/assets/js/17.93d35457.js"><link rel="prefetch" href="/FEE-doc/assets/js/18.fe060def.js"><link rel="prefetch" href="/FEE-doc/assets/js/19.03657e86.js"><link rel="prefetch" href="/FEE-doc/assets/js/20.42941d90.js"><link rel="prefetch" href="/FEE-doc/assets/js/21.416970b9.js"><link rel="prefetch" href="/FEE-doc/assets/js/3.8d87c35c.js"><link rel="prefetch" href="/FEE-doc/assets/js/4.a50e9400.js"><link rel="prefetch" href="/FEE-doc/assets/js/5.99243804.js"><link rel="prefetch" href="/FEE-doc/assets/js/6.51eeb66a.js"><link rel="prefetch" href="/FEE-doc/assets/js/7.8dd743ae.js"><link rel="prefetch" href="/FEE-doc/assets/js/8.6cc17035.js"><link rel="prefetch" href="/FEE-doc/assets/js/9.816399d4.js">
+    <link rel="stylesheet" href="/FEE-doc/assets/css/0.styles.c67ff556.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/FEE-doc/zh/" class="home-link router-link-active"><img src="/FEE-doc/images/icons/logo.png" alt="FEE开源项目文档" class="logo"> <span class="site-name can-hide">FEE开源项目文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="灯塔系统" class="dropdown-title"><span class="title">灯塔系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/FEE-doc/zh/arms/1.0/" class="nav-link router-link-active">
+  V1.x
+</a></li></ul></div></div> <a href="https://github.com/aa978563552/FEE-doc" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="灯塔系统" class="dropdown-title"><span class="title">灯塔系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/FEE-doc/zh/arms/1.0/" class="nav-link router-link-active">
+  V1.x
+</a></li></ul></div></div> <a href="https://github.com/aa978563552/FEE-doc" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/FEE-doc/zh/arms/1.0/" class="sidebar-link">灯塔 V1.0</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>组成</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FEE-doc/zh/arms/1.0/client.html" class="sidebar-link">Client端</a></li><li><a href="/FEE-doc/zh/arms/1.0/server.html" class="active sidebar-link">Server端</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#生成建表语句" class="sidebar-link">生成建表语句</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#启动server" class="sidebar-link">启动server</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#读取nginx日志规范，及打点规范" class="sidebar-link">读取Nginx日志规范，及打点规范</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#任务执行周期" class="sidebar-link">任务执行周期</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#上线checklist" class="sidebar-link">上线CheckList</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#api编写checklist" class="sidebar-link">API编写CheckList</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#项目层级结构" class="sidebar-link">项目层级结构</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#数据库建表checklist" class="sidebar-link">数据库建表CheckList</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#创建命令checklist" class="sidebar-link">创建命令CheckList</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#提交代码checklist" class="sidebar-link">提交代码CheckList</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#添加接口checklist" class="sidebar-link">添加接口CheckList</a></li><li class="sidebar-sub-header"><a href="/FEE-doc/zh/arms/1.0/server.html#系统接入流程" class="sidebar-link">系统接入流程</a></li></ul></li><li><a href="/FEE-doc/zh/arms/1.0/sdk.html" class="sidebar-link">SDK</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="生成建表语句"><a href="#生成建表语句" class="header-anchor">#</a> 生成建表语句</h2> <p>创建platform数据库, 然后执行<code>npm run fee Utils:GenerateSQL 1,2,3,4,5,6,7,8,9,10 '2018-01' '2020-10' &gt; init.sql</code> 生成数据库SQL, 执行<code>mysql -u root -h 127.0.0.1 platform -p &lt; init.sql</code>, 执行建表语句</p> <h2 id="启动server"><a href="#启动server" class="header-anchor">#</a> 启动server</h2> <ol><li>启动项目 =&gt; <code>npm run watch</code> 启动babel监控, <code>npm run dev</code> 启动项目.</li> <li>访问 http://localhost:3000/ 查看效果</li> <li>构建完成后, 目录结构如下<div class="language-text line-numbers-mode"><pre class="language-text"><code>-   主目录(~)
+    -   www
+        -   plat-fe             
+            -   fee-rd          =&gt;  项目路径
+        -   docker              =&gt;  [辅助]docker所在路径
+        -   ha_develope_env     =&gt;  [辅助]ha_develope_env所在路径
+        -   htdocs_in_docker    =&gt;  [辅助]php相关代码目录(指向~/www/docker/base/data0/www/htdocs的快捷方式)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li></ol> <h2 id="读取nginx日志规范，及打点规范"><a href="#读取nginx日志规范，及打点规范" class="header-anchor">#</a> 读取Nginx日志规范，及打点规范</h2> <ol><li>Nginx需要打点的日志格式<div class="language-text line-numbers-mode"><pre class="language-text"><code>2019-04-18T16:00:00+08:00       -       -       111.160.30.22   111.160.30.22   200     0.000   3058    43      15d04347-be16-b9ab-0029-24e4b6645950    -       -       9689c3ea-5155-2df7-a719-e90d2dedeb2c 937ba755-116a-18e6-0735-312cba23b00c    GET HTTP/1.1    http://feedemo.lianjia.com/demo.gif?d=%7B%22type%22%3A%22error%22%2C%22code%22%3A7%2C%22detail%22%3A%7B%22error_no%22%3A%22%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99_JS_RUNTIME_ERROR%22%2C%22url%22%3A%22demo.lianjia.com%2Findex.html%22%7D%2C%22extra%22%3A%7B%22desc%22%3A%22Uncaught%20INVALID_STATE_ERR%20%3A%20Pausing%20to%20reconnect%20websocket%20at%20http%3A%2F%2Fdemo.lianjia.com%2Fasset%2Fmodule%2Fsoftphone%2Freconnecting-websocket.js%3A1%3A2820%22%2C%22stack%22%3A%22no%20stack%22%7D%2C%22common%22%3A%7B%22pid%22%3A%22hello_fe%22%2C%22uuid%22%3A%220s2jsaq1qk2cqmr-rit6ithbu-0s2jsaq1qk2cqmr-rit6ithbu%22%2C%22ucid%22%3A99999%2C%22is_test%22%3Afalse%2C%22record%22%3A%7B%22time_on_page%22%3Atrue%2C%22performance%22%3Atrue%2C%22js_error%22%3Atrue%2C%22js_error_report_config%22%3A%7B%22ERROR_RUNTIME%22%3Atrue%2C%22ERROR_SCRIPT%22%3Atrue%2C%22ERROR_STYLE%22%3Atrue%2C%22ERROR_IMAGE%22%3Atrue%2C%22ERROR_AUDIO%22%3Atrue%2C%22ERROR_VIDEO%22%3Atrue%2C%22ERROR_CONSOLE%22%3Afalse%2C%22ERROR_TRY_CATCH%22%3Atrue%7D%7D%2C%22version%22%3A%221.0.0%22%2C%22timestamp%22%3A1555574400507%2C%22runtime_version%22%3A%221.0.0%22%2C%22sdk_version%22%3A%221.1.2%22%2C%22page_type%22%3A%22demo.lianjia.com%2Findex.html%22%7D%7D  -       Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 SE 2.X MetaSr 1.0     -       sample=-&amp;_UC_agent=-&amp;lianjia_device_id=-&amp;-      -       -       -
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li>日志对应ngnix日志格式(仅供参考,不能直接使用)<div class="language-text line-numbers-mode"><pre class="language-text"><code>$time_local                      -       -       $http_x_real_ip $http_host  $status $request_time $request_length $body_bytes_sent      15d04347-be16-b9ab-0029-24e4b6645950    -       -       9689c3ea-5155-2df7-a719-e90d2dedeb2c 937ba755-116a-18e6-0735-312cba23b00c    $request  -       $http_user_agent     -       sample=-&amp;_UC_agent=-&amp;lianjia_device_id=-&amp;-      -       -       -
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li>Nginx日志存储格式</li></ol> <div class="language-text line-numbers-mode"><pre class="language-text"><code>首先在/server/src/configs/common.js 里配置Nginx公共路径nginxLogFilePath
+此路径下的日志文件格式需为：
+nginxLogFilePath/YYYYMM/DD/HH/mm.log
+例子：/root/nginx/log/201904/18/20/28.log
+任务会每分钟读取对应路径下的日志文件，然后分析入库。
+
+如果可以使用kafka工具，则可以在/server/src/configs/kafka.js 里配置kafka
+然后在 /server/src/configs/common.js 里设置use.kafka为true
+
+自此，跑批任务Task:Manager会根据用户配置完成数据的接受，分析，存储
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="任务执行周期"><a href="#任务执行周期" class="header-anchor">#</a> 任务执行周期</h2> <div class="language- extra-class"><pre><code>1.  每分钟一次(准实时)
+    1.  原始数据入库
+        1.  错误数据入库(延迟2分钟)
+    2.  按分钟统计
+        1.  错误数据统计(延迟2分钟)
+2.  每10分钟一次
+    1.  原始数据入库
+        1.  uv
+        2.  页面性能指标
+        3.  用户停留时长
+    2.  按小时统计
+        1.  uv
+        2.  新用户数
+        3.  页面性能指标
+        4.  错误数据统计
+3.  每小时一次
+    1.  原始数据入库
+        1.  设备数据
+        2.  用户点击
+        3.  首次登陆用户
+    2.  按天统计(当天)
+        1.  uv
+        2.  新用户数
+        3.  页面性能指标
+        4.  错误数据统计
+        5.  用户停留时长
+4.  每六小时一次
+    1.  按天统计(昨日)
+        1.  uv
+        2.  新用户数
+        3.  页面性能指标
+        4.  错误数据统计
+        5.  用户停留时长
+    2.  按月统计
+        1.  uv
+        2.  新用户数
+        3.  页面性能指标
+        4.  错误数据统计
+        5.  用户停留时长
+        
+        6.  操作系统分布
+        7.  设备分布
+        8.  浏览器分布
+</code></pre></div><h2 id="上线checklist"><a href="#上线checklist" class="header-anchor">#</a> 上线CheckList</h2> <ul><li>[ ] 线上环境是否可以正常链接kafka? (op是否已安装librdkafka)</li> <li>[ ] log文件是否可以正常写入?</li> <li>[ ] 是否有不必要的log? 是否有可能会引起磁盘打满的log?(一条日志一个log, 会导致磁盘直接打满)</li> <li>[ ] kafka autoCommit默认是打开的，是否关闭，自己控制什么时候提交。</li></ul> <h2 id="api编写checklist"><a href="#api编写checklist" class="header-anchor">#</a> API编写CheckList</h2> <ul><li>[ ] list接口无数据时是否返回空列表(而不是空对象)</li> <li>[ ] 必要的增删改查(add/udate/detail/list/delete)是否齐备</li> <li>[ ] 添加修改接口是否进行了权限校验</li></ul> <h2 id="项目层级结构"><a href="#项目层级结构" class="header-anchor">#</a> 项目层级结构</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>.
+├── bin                             //  项目启动文件, node项目上线后, 通过 bash bin/run.sh 直接启动
+│   └── run.sh
+├── document                        //  文档目录
+│   └── api.md
+├── log                             //  本地日志, 线上日志位于 /data0/www/logs/项目网址/  下. 运行时通过配置文件, 根据环境变量获取日志路径
+│
+├── sql                             //  项目SQL, 字符集编码使用utf8mb4, 以便支持可能的emoji表情
+│   └── init.sql
+├── public                          //  express的静态资源目录
+│   ├── assets
+│   ├── libs
+│   └── static
+├── dist                            //  babel的编译结果目录. 原生node项目存在两个问题: 1.根据node环境不同, 不一定支持最新ES6特性(例如import) 2. 导入模块时, 需要手工计算'..'的深度
+│                                   //  因此需要引入babel转义js, 引入babel-plugin-root-import, 支持从根目录导入模块(例如 import * from `~/src/model/base`)
+├── jsconfig.json                   //  引入babel-plugin-root-import之后会带来一个新问题: 编辑器无法识别导入路径, 因此需要引入jsconfig.json辅助VSCode识别
+├── webpack.config.js               //  引入webpack.config.js辅助WebStrom识别
+│  
+├── src                             //  源代码
+│   │  
+│   ├── app.js                      //  web框架入口
+│   │  
+│   ├── fee.js                      //  命令入口, 命令框架基于 @adnoishJS/ace, 使用fee.js统一管理所有命令, 提供了标准代码结构, 参数解析&amp;日志打印功能
+│   │  
+│   ├── commands                    //  命令目录
+│   │   ├── base.js                 //  基础命令
+│   │   ├── demo.js                 //  demo命令, 按照规范编写的demo, 包含了所有的命令用法
+│   │   ├── parse
+│   │   │   ├── base.js             //  子类命令也可以在基类之上再次派生基类
+│   │   │   ├── pv.js
+│   │   │   └── uv.js
+│   │   └── utils
+│   │       └── generateSql.js
+│   ├── configs                     //  配置文件夹
+│   │   ├── env.js                  //  所有配置均依赖env配置, 最后通过export config[env]的方式来按环境导出配置项
+│   │   ├── app.js
+│   │   └── redis.js
+│   ├── library                     //  外部库, 引入时使用 import * as LXXXX 的方式进行引入,在as前加上L前缀, 避免函数重名
+│   │   ├── ipip                    //  ipip.net 当前中国准确度最高的ip =&gt; 地址转换库, 有各种语言的客户端, 免费版本可以精确到城市
+│   │   │   ├── index.js            //  转换ip
+│   │   │   └── ipip.net_20180910.datx  //  文件名中带上更新时间, 方便后续替换
+│   │   ├── auth                    //  验证用户身份 parseToken &amp; generateToken
+│   │   ├── http                    //  发送网络请求
+│   │   ├── kafka                   //  获取kafka日志文件路径
+│   │   ├── logger                  //  打印并记录日志
+│   │   ├── mysql                   //  连接并操作数据库
+│   │   ├── redis                   //  redis客户端
+│   │   └── utils                   //  通用工具库
+│   │       └── modules
+│   │           ├── alart.js        //  公司内部即时消息系统，通知到个人
+│   │           ├── database.js     //  数据库有关工具函数
+│   │           ├── network.js      //  网络有关工具 &amp; getLocalIpList
+│   │           ├── router_config_builder.js //  封装了路由格式
+│   │           └── util.js         //  其他工具函数 
+│   │               ├── sleep       //  睡眠函数
+│   │               ├── urlParse    //  解析URL
+│   │               ├── ip2Locate   //  解析IP地址对应的国家省份城市
+│   │               ├── objectToArray    //  对象转换为数组
+│   │               ├── handleEmptyData  //  处理空对象（舍弃对象的空属性）
+│   │               └── compare     //  对比对象中指定参数
+│   ├── middlewares                 //  express中间件, 可以执行检查登录等通用操作
+│   │   └── privilege.js
+│   ├── model                       //  M部分, 可以直接操作数据库 按功能/API路径区分文件夹, 按表名命名js文件
+│   │   ├── parse                   //  解析指令对应的数据库操作
+│   │   │   ├── behavior_distribution.js
+│   │   │   ├── city_distribution.js
+│   │   │   ├── common.js
+│   │   │   ├── duration_distribution.js
+│   │   │   ├── monitor.js
+│   │   │   ├── monitor_ext.js
+│   │   │   ├── project.js
+│   │   │   └── uv_record.js
+│   │   ├── project                  // 项目相关操作，包括报警，成员，项目添加，用户 
+│   │   │   ├── alarm
+│   │   │   │   └──alarm_config.js
+│   │   │   ├── project_member.js
+│   │   │   ├── project.js
+│   │   │   └── user.js
+│   │   └── summary                  // 统计指令对应的数据库操作
+│   │       ├── page_view.js
+│   │       └── unique_view.js
+│   ├── routes                      //  路由/接口
+│   │   ├── api                     //  根据接口路径, 创建文件
+│   │   │   ├── behavior            
+│   │   │   │   └── online
+│   │   │   │       └── index.js
+│   │   │   └── monitor
+│   │   │       └── index.js
+│   │   └── index.js
+│   └── views                       //  express模板, 因为fee已经实现了前后端完全分离, 因此意义不大
+│       └── index.ejs
+├── README.md                       //  项目说明
+├── online.sh                       //  jinkins编译脚本
+├── package.json                    //  项目依赖列表
+├── .gitattributes                  //  配置换行符, 用于解决Windows(换行为CRLF), Mac/Unix(换行为LF)平台下换行符不一致的问题, 参考 https://github.com/alexkaratarakis/gitattributes
+├── .gitignore                      //  项目忽略文件, 参考 https://www.gitignore.io/
+└── .babelrc                        //  babel配置
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br></div></div><h2 id="数据库建表checklist"><a href="#数据库建表checklist" class="header-anchor">#</a> 数据库建表CheckList</h2> <ol><li>在极端情况下, 数据库单表容量是否绝不会超过一千万条数据</li> <li>是否有以下字段
+<ol><li>create_time, 记录创建时间, bigint</li> <li>update_time, 记录更新时间, bigint</li> <li>create_ucid, 记录创建人ucid, varchar(20) , 可选, 只有当会有人编辑记录时才需要该字段</li> <li>update_ucid, 记录更新人ucid, varchar(20) , 可选, 只有当会有人编辑记录时才需要该字段</li></ol></li> <li></li></ol> <h2 id="创建命令checklist"><a href="#创建命令checklist" class="header-anchor">#</a> 创建命令CheckList</h2> <ol><li>类名是否和signature保持一致(类名会被作为日志文件名)</li></ol> <h2 id="提交代码checklist"><a href="#提交代码checklist" class="header-anchor">#</a> 提交代码CheckList</h2> <ol><li>检查是否已经删除了用于测试的console</li></ol> <h2 id="添加接口checklist"><a href="#添加接口checklist" class="header-anchor">#</a> 添加接口CheckList</h2> <ol><li>是否已添加mock
+<ol><li>标准mock配置 =&gt;</li></ol> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+<span class="token property">&quot;$schema&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://json-schema.org/draft-04/schema#&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;enum&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token number">0</span>
+    <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;array&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;items&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;url&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;minimum&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;maximum&quot;</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;exclusiveMinimum&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;exclusiveMaximum&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;enum&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token number">3</span><span class="token punctuation">,</span>
+            <span class="token number">4</span><span class="token punctuation">,</span>
+            <span class="token number">5</span><span class="token punctuation">,</span>
+            <span class="token number">6</span><span class="token punctuation">,</span>
+            <span class="token number">7</span><span class="token punctuation">,</span>
+            <span class="token number">8</span><span class="token punctuation">,</span>
+            <span class="token number">9</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;enum&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;&quot;</span>
+    <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;action&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;enum&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;success&quot;</span>
+    <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;enum&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;&quot;</span>
+    <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br></div></div></li></ol> <h2 id="系统接入流程"><a href="#系统接入流程" class="header-anchor">#</a> 系统接入流程</h2> <ol><li><p>接收邮件, 确认项目日pv, 项目名, pid, 负责人信息. 对于日pv大于10w的系统, 需要进行抽样打点, 保证每日入库日志数不高于10w/日</p></li> <li><p>更新generateSQL命令, 依次是id, 抽样比率, 项目名(展示), 项目id, 负责人信息, 其他数据和之前SQL保持一致即可
+demo =&gt;</p> <div class="language-SQL line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">REPLACE</span> <span class="token keyword">INTO</span> \<span class="token punctuation">`</span>t_o_project\<span class="token punctuation">`</span> <span class="token punctuation">(</span>\<span class="token punctuation">`</span>id\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>rate\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>display_name\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>project_name\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>c_desc\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>is_delete\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>create_ucid\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>update_ucid\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>create_time\<span class="token punctuation">`</span><span class="token punctuation">,</span> \<span class="token punctuation">`</span>update_time\<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token string">'社区生活管理平台'</span><span class="token punctuation">,</span> <span class="token string">'life_manage'</span><span class="token punctuation">,</span> <span class="token string">'负责人:**'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>生成SQL命令, 例如</p> <p>模板 =&gt;</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> run build<span class="token punctuation">;</span> node dist/fee Utils:GenerateSQL <span class="token variable">${项目id<span class="token operator">,</span> 多个id逗号分隔}</span> <span class="token variable">${开始时间<span class="token operator">,</span> YYYY-MM格式}</span>  <span class="token variable">${结束时间<span class="token operator">,</span> YYYY-MM格式}</span> <span class="token operator">&gt;</span> init.sql<span class="token punctuation">;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;SQL生成完毕&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>实际命令 =&gt;</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> run build <span class="token punctuation">;</span> node dist/fee Utils:GenerateSQL <span class="token number">13,14</span>,15 <span class="token string">'2018-10'</span> <span class="token string">'2019-12'</span> <span class="token operator">&gt;</span> init.sql <span class="token punctuation">;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;SQL生成完毕&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>在dev数据库执行生成的SQL</p></li> <li><p>dev数据执行完毕, 确认无误后, 在线上数据库执行生成的SQL</p></li> <li><p>对接完成``</p></li></ol></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/aa978563552/FEE-doc/edit/master/zh/arms/1.0/server.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次编辑时间:</span> <span class="time">2020-4-10 16:09:39</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/FEE-doc/zh/arms/1.0/client.html" class="prev">
+        Client端
+      </a></span> <span class="next"><a href="/FEE-doc/zh/arms/1.0/sdk.html">
+        SDK
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/FEE-doc/assets/js/app.ea892fa5.js" defer></script><script src="/FEE-doc/assets/js/2.ead826cc.js" defer></script><script src="/FEE-doc/assets/js/14.672bf7b2.js" defer></script>
+  </body>
+</html>
