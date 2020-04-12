@@ -11,37 +11,37 @@ title: 灯塔 V1.0
 
 - 用户在线时长
 
-![在线时长](/images/fee/1.0/onlineTime.png)
+![在线时长](/FEE-doc/images/fee/1.0/onlineTime.png)
 
 - 菜单点击量
 
-![菜单点击量](/images/fee/1.0/menuClick.jpg)
+![菜单点击量](/FEE-doc/images/fee/1.0/menuClick.jpg)
 
 - 用户增长
 
-![用户增长](/images/fee/1.0/userGrowth_01.jpg)
-![用户增长](/images/fee/1.0/userGrowth_02.jpg)
+![用户增长](/FEE-doc/images/fee/1.0/userGrowth_01.jpg)
+![用户增长](/FEE-doc/images/fee/1.0/userGrowth_02.jpg)
 
 ### 异常监控
 
 - 页面性能
 
-![页面性能](/images/fee/1.0/perf_01.jpg)
-![页面性能](/images/fee/1.0/perf_02.jpg)
+![页面性能](/FEE-doc/images/fee/1.0/perf_01.jpg)
+![页面性能](/FEE-doc/images/fee/1.0/perf_02.jpg)
 
 - 错误看板
 
-![错误看板](/images/fee/1.0/error.jpg)
+![错误看板](/FEE-doc/images/fee/1.0/error.jpg)
 
 ### 报警
 
 - 报警配置
 
-![报警配置](/images/fee/1.0/alarmConfig.jpg)
+![报警配置](/FEE-doc/images/fee/1.0/alarmConfig.jpg)
 
 - 报警日志
 
-![报警日志](/images/fee/1.0/alarmLog.jpg)
+![报警日志](/FEE-doc/images/fee/1.0/alarmLog.jpg)
 
 ## 环境搭建
 
@@ -142,7 +142,7 @@ standard                    =>  JS Standard代码规范
 
 ## 加入群来和开发人员讨论问题
 
-![灯塔开源qq群](/images/fee/1.0/qq.jpeg)
+![灯塔开源qq群](/FEE-doc/images/fee/1.0/qq.jpeg)
 
 ## License
 
